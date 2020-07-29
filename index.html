@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Nobel Viz</title>
+<link rel="stylesheet" href="style.css" media="screen">
+<body>
+    <div id="chart">
+        <!-- 2. タイトルと説明情報を含むヘッダ -->
+        <div id="title">Visualizing the Nobel Prize</div>
+        <div id="info">Visualizing the Nobel Prize</div>
+        <!-- 3. 可視化要素のプレースホルダ -->
+        <div id="nbviz">
+            <!-- NOBEL-VIZ 開始 -->
+            <div id="chart-holder" class="_dev">
+                <!-- 地図とツールチップ -->
+                <div id="nobel-map">
+                    <div class="hidden">
+                        <p><strong>Nobel Prize Winners by Country</strong></p>
+                        <p><span id="value">100</span></p>
+                    </div>
+                </div>
+                <!-- 受賞者のリスト -->
+                <div id="nobel-list">
+                    <h2>Selected Winners</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th id="year">Year</th>
+                                <th id="category">Category</th>
+                                <th id="name">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody id="novel-list-body"></tbody>
+                    </table>
+                </div>
+                <!-- 時系列での受賞者数 -->
+                <!-- <div id="nobel-time"></div> -->
+                <!-- 人物情報ボックス -->
+                <div id="nobel-winner">
+                    <div id="picbox"></div>
+                    <div id="winner-title"></div>
+                    <div id="infobox"></div>
+                    <div id="readmore"></div>
+                </div>
+                <!-- ノーベル賞棒グラフ-->
+                <div id="nobel-bar">
+                    <div id="tooltip" class="hidden">
+                        <p><strong>Nobel Prize Winners by Country</strong></p>
+                        <p><span id="value">100</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- NOBEL-VIZ 終了 -->
+        </div>
+    </div>
+    <!-- 4. JavaScriptファイル -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v3.min.js"></script>
+    <script src="lib/crossfilter.js"></script>
+    <script src="lib/string.js"></script>
+    <script src="js/globals.js"></script>
+    <script src="js/vizBar.js"></script>
+    <script src="js/script.js"></script>
+</body>
