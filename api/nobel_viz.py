@@ -15,7 +15,9 @@ def api():
     print(query)
     response = None
     if query :
-        response = df.query(query)
+        #print(df.query('name.str.contains("stein")',engine='python'))
+        response = df.query(query,engine='python')
+        print(response)
     else :
         response = df
     return response.to_json()
@@ -32,7 +34,6 @@ def getwinner_per_category():
         "Chemistry","Physics","Economics","Literature",
         "Physiology or Medicine","Peace"
     ]
-
     ret = {}
     for cat in categories :
         tmpdf = df[df.category == cat]
