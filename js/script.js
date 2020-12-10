@@ -56,12 +56,6 @@ var vizWorldMap = function(){
             .attr("class","boundary")
             .attr("d",path);
     });
-
-    drawWorldCircle();
-};
-
-
-var drawWorldCircle = function(){
     // 地図に円をマッピング
     var winnersNumByCountriesURL = "https://raw.githubusercontent.com/k4zam1/novel-winners-visualization/master/data/bycountry.csv"
     d3.csv(winnersNumByCountriesURL,function(error,data){
@@ -204,6 +198,7 @@ var drawWorldCircle = function(){
             });
     });
 };
+
 
 var main = function(){
     vizWorldMap();
