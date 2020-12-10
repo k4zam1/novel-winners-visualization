@@ -4,10 +4,10 @@
 <link rel="stylesheet" href="style.css" media="screen">
 <body>
     <div id="chart">
-        <!-- 2. タイトルと説明情報を含むヘッダ -->
+        <!-- タイトルと説明情報を含むヘッダ -->
         <div id="title">Visualizing the Nobel Prize</div>
         <div id="info">k4zam1</div>
-        <!-- 3. 可視化要素のプレースホルダ -->
+        <!-- 可視化要素のプレースホルダ -->
         <div id="nbviz">
             <!-- NOBEL-VIZ 開始 -->
             <div id="chart-holder" class="_dev">
@@ -27,21 +27,6 @@
                 </div>
                 <!-- 人物情報ボックス -->
                 <div id="nobel-winner">
-                    
-                    <form onsubmit="return false;">
-                        <table>
-                          <tr>
-                            <td>Search :</td>
-                            <td>
-                              <!-- 入力フォーム -->
-                              <input id="text" type="text" name="pattern" value="" autocomplete="off" size="25" style="display: block" onkeyup="search()">
-                              <!-- 補完候補を表示するエリア -->
-                              <div id="suggest" style="display:none;"></div>
-                            </td>
-                          </tr>
-                        </table>
-                      </form>
-
                     <div id="picbox"></div>
                     <div id="winner-title"></div>
                     <div id="infobox"></div>
@@ -58,13 +43,9 @@
             <!-- NOBEL-VIZ 終了 -->
         </div>
     </div>
-    <!-- 4. JavaScriptファイル -->
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://d3js.org/topojson.v3.min.js"></script>
-    <script src="lib/crossfilter.js"></script>
     <script src="lib/string.js"></script>
-    <script src="lib/suggest.js"></script>
-    <script src="js/globals.js"></script>
     <script src="js/vizBar.js"></script>
     <script src="js/script.js"></script>
 </body>

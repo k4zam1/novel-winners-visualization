@@ -90,4 +90,4 @@ var vizNobelBar = function(){
             .attr("transform","translate("+xoffset+","+10+")")
             .call(yAxis);
     });
-}();
+};
