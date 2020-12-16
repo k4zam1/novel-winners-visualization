@@ -199,8 +199,9 @@ var drawWorldCircle = function(){
 
 var vizWinnerInfo = function(info){
     // 初期化
-    var selectors = ["#picbox","#infobox","#readmore"];
-    d3.select(...selectors).text("");
+    d3.select("#picbox").text("");
+    d3.select("#infobox").text("");
+    d3.select("#readmore").text("");
 
     // picbox
     d3.select("#picbox")
@@ -216,7 +217,7 @@ var vizWinnerInfo = function(info){
         .enter()
         .append("p")
         .text(function(d){
-            if(keys.includes(d.key)){
+            if(keys.includes(d.key) && d.value != null){
                 return "{} : {}".format(d.key,d.value);
             }
         });
